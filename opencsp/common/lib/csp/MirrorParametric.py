@@ -47,9 +47,9 @@ class MirrorParametric(MirrorAbstract):
 
     def __repr__(self) -> str:
         if isinstance(self._surface_function, FunctionXYContinuous):
-            return f"Parametricly defined mirror defined by the function {self._surface_function}"
+            return f"Parametrically defined mirror defined by the function {self._surface_function}"
         return (
-            f"Parametricly defined mirror defined by the function {inspect.getsourcelines(self._surface_function)[0]}"
+            f"Parametrically defined mirror defined by the function {inspect.getsourcelines(self._surface_function)[0]}"
         )
 
     def _define_normals_function(self, surface_function: Callable[[float, float], float]) -> Callable:
